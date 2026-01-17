@@ -1,0 +1,40 @@
+{
+  "seed": 42,
+  "train_ratio": 0.7,
+  "val_ratio": 0.15,
+  "test_ratio": 0.15,
+  "train_count": 1867,
+  "val_count": 398,
+  "test_count": 406,
+  "total_count": 2671,
+  "class_distribution": {
+    "train": {
+      "cardboard": 296,
+      "glass": 359,
+      "metal": 294,
+      "paper": 424,
+      "plastic": 373,
+      "trash": 121
+    },
+    "val": {
+      "cardboard": 63,
+      "glass": 76,
+      "metal": 63,
+      "paper": 91,
+      "plastic": 79,
+      "trash": 26
+    },
+    "test": {
+      "cardboard": 64,
+      "glass": 78,
+      "metal": 64,
+      "paper": 92,
+      "plastic": 81,
+      "trash": 27
+    }
+  },
+  "sources": {
+    "raw_dir": "data/raw",
+    "auto_labeled_dir": "data/auto_labeled"
+  }
+}

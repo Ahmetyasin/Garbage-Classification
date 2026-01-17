@@ -1,0 +1,54 @@
+data:
+  raw_dir: "data/raw"
+  scraped_dir: "data/scraped"
+  auto_labeled_dir: "data/auto_labeled"
+  final_dir: "data/final"
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+scraping:
+  images_per_class:
+    cardboard: 35
+    glass: 35
+    metal: 35
+    paper: 35
+    plastic: 35
+    trash: 75
+
+auto_labeling:
+  model: "openai/clip-vit-base-patch32"
+  confidence_threshold: 0.7
+
+training:
+  model: "mobilenet_v2"
+  pretrained: true
+  num_classes: 6
+  batch_size: 32
+  epochs: 30
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 5
+  lr_scheduler_patience: 3
+
+augmentation:
+  rotation_degrees: 15
+  horizontal_flip_prob: 0.5
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+
+wandb:
+  project: "garbage-classification"
+  entity: null
+
+classes:
+  - "cardboard"
+  - "glass"
+  - "metal"
+  - "paper"
+  - "plastic"
+  - "trash"
+
+seed: 42
